@@ -194,4 +194,32 @@ return [
         // ...
     ])->toArray(),
 
+    /*
+    |--------------------------------------------------------------------------
+    | Custom config
+    |--------------------------------------------------------------------------
+    |
+    | Define custom config
+    |
+    */
+
+    'currencies' => [
+        'TWD' => [
+            'TWD' => env('CURRENCY_TWD_TO_TWD', 1),
+            'JPY' => env('CURRENCY_TWD_TO_JPY', 3.669),
+            'USD' => env('CURRENCY_TWD_TO_USD', 0.03281)
+        ],
+        'JPY' => [
+            'TWD' => env('CURRENCY_JPY_TO_TWD', 0.26956),
+            'JPY' => env('CURRENCY_JPY_TO_JPY', 1),
+            'USD' => env('CURRENCY_JPY_TO_USD', 0.00885)
+
+        ],
+        'USD' => [
+            'TWD' => env('CURRENCY_USD_TO_TWD', 30.444),
+            'JPY' => env('CURRENCY_USD_TO_JPY', 111.801),
+            'USD' => env('CURRENCY_USD_TO_USD', 1)
+        ]
+    ]
+
 ];
